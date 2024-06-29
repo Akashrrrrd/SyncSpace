@@ -1,0 +1,37 @@
+.settings-page {
+    padding: 20px;
+  }
+  
+  .settings-header {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .account-settings,
+  .notification-settings {
+    margin-bottom: 40px;
+  }
+  
+  .account-settings form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .account-settings form label {
+    margin-bottom: 10px;
+  }
+  
+  .account-settings form input {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .notification-options {
+    margin-top: 20px;
+  }
+  
+  .notification-options label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  

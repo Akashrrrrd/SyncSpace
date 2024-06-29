@@ -1,0 +1,34 @@
+.help-page {
+    padding: 20px;
+  }
+  
+  .help-header {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .faq-section {
+    margin-bottom: 40px;
+  }
+  
+  .faq-list {
+    margin-top: 10px;
+  }
+  
+  .faq-item {
+    margin-bottom: 20px;
+  }
+  
+  .contact-section {
+    margin-top: 40px;
+  }
+  
+  .contact-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-section ul li {
+    margin-bottom: 10px;
+  }
+  

@@ -1,0 +1,144 @@
+.video-conference {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: 240px;
+  margin-top: 80px;
+}
+
+.video-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.video-header h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #333;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 60%;
+  background-color: #1c1e21;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.video {
+  width: 48%;
+  height: 100%;
+  object-fit: cover;
+  border-right: 2px solid #ffffff;
+}
+
+.video:last-child {
+  border-right: none;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.control-button,
+.start-call-button,
+.end-call-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.end-call-button {
+  background-color: #ff4d4d;
+}
+
+.control-button:hover,
+.start-call-button:hover,
+.end-call-button:hover {
+  background-color: #0056b3;
+}
+
+.end-call-button:hover {
+  background-color: #cc0000;
+}
+
+.participant-list {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+  top: 20px;
+  right: 20px;
+}
+
+.participant-list h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.participant-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.participant-list ul li {
+  font-size: 18px;
+  color: #555;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.participant-list ul li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    flex-direction: column;
+  }
+
+  .video {
+    width: 100%;
+    height: 45%;
+    border-right: none;
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .video:last-child {
+    border-bottom: none;
+  }
+
+  .participant-list {
+    width: 90%;
+    position: static;
+    margin-top: 20px;
+  }
+}

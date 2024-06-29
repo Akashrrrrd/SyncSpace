@@ -1,0 +1,166 @@
+.version-control {
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 240px;
+    margin-top: 80px;
+    width: calc(100% - 240px);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    position: relative;
+    padding: 0 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.header h1:hover {
+    transform: scale(1.2);
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.commit-list {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    height: 70vh;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.commit-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.commit-item:hover {
+    transform: scale(1.02);
+    background-color: #f0f8ff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.commit-item:hover .avatar {
+    transform: rotate(360deg);
+}
+
+.commit-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.commit-message {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.commit-author, .commit-date {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 5px;
+    color: #007bff;
+}
+
+.view-details-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.view-details-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.commit-details {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in;
+}
+
+.commit-details h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.commit-details p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.commit-details p strong {
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,105 @@
+.sidebar {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f4f9;
+    padding: 25px 15px;
+    position: fixed;
+    width: 240px; 
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar img {
+    width: 20px;
+}
+
+.sidebar .menu {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: none;
+}
+
+.sidebar .new-chat {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    font-size: 14px;
+    color: grey;
+    cursor: pointer;
+}
+
+.sidebar .recent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px; 
+}
+
+.sidebar .recent-title {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.sidebar .recent-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    color: #282828;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sidebar .recent-entry:hover {
+    background-color: #e2e6eb;
+    transform: scale(0.98); /* Slightly reduce scale on hover */
+}
+
+.sidebar .bottom {
+    margin-top: auto; /* Push bottom items to the bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .bottom-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .bottom-item:hover {
+    background-color: #e2e6eb;
+    color: #333; /* Darken text color on hover */
+}
+
+/* Adjustments when Sidebar is collapsed */
+.sidebar.collapsed {
+    width: 60px; /* Width of the collapsed sidebar */
+}
+
+.sidebar.collapsed .menu {
+    margin-left: 0;
+}
+
+.sidebar.collapsed .new-chat,
+.sidebar.collapsed .recent,
+.sidebar.collapsed .bottom {
+    display: none; /* Hide elements when sidebar is collapsed */
+}
